@@ -1,17 +1,3 @@
-<div align="center">
-
-# 🚀 Enterprise AI Analytics & Cloud BI Intelligence Platform
-### *Autonomous Serverless Architecture • Real-Time Data Pipeline • Gemini LLM Insights • Zero-Downtime CI/CD*
-
-![AWS](https://img.shields.io/badge/AWS-Serverless_Architecture-orange?style=for-the-badge&logo=amazon-aws)
-![Gemini AI](https://img.shields.io/badge/Google_Gemini_2.5-AI_Engine-4285F4?style=for-the-badge&logo=google)
-![GitHub Actions](https://img.shields.io/badge/CI%2FCD-Automated_Pipeline-2088FF?style=for-the-badge&logo=github-actions)
-![Security](https://img.shields.io/badge/Security-Enterprise_Grade-brightgreen?style=for-the-badge)
-
-</div>
-
----
-
 ### 🌟 Executive Summary & Value Proposition
 
 **Enterprise Cloud BI Platform** ek next-generation cloud-native analytics solution hai jo legacy reporting ko realtime, AI-powered predictive insights me convert karti hai. Is solution ko high-concurrency enterprise data environments ke liye scale-ready architecture par design kiya gaya hai.
