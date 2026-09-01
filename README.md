@@ -1,30 +1,26 @@
-# 📊 Swift-Mart: Enterprise Zero-Prep BI Dashboard & ETL Pipeline
+<div align="center">
 
-An enterprise-grade Business Intelligence (BI) portal built with **Streamlit** and **Pandas** that solves a major real-world corporate problem: **Data Ingestion Friction**. 
+# 🚀 Enterprise AI Analytics & Cloud BI Intelligence Platform
+### *Autonomous Serverless Architecture • Real-Time Data Pipeline • Gemini LLM Insights • Zero-Downtime CI/CD*
 
-This portal features an **Automated Schema Alignment Layer** that allows non-technical store managers to drag-and-drop raw Shopify/WooCommerce CSV exports directly without any manual column cleaning or renaming.
+![AWS](https://img.shields.io/badge/AWS-Serverless_Architecture-orange?style=for-the-badge&logo=amazon-aws)
+![Gemini AI](https://img.shields.io/badge/Google_Gemini_2.5-AI_Engine-4285F4?style=for-the-badge&logo=google)
+![GitHub Actions](https://img.shields.io/badge/CI%2FCD-Automated_Pipeline-2088FF?style=for-the-badge&logo=github-actions)
+![Security](https://img.shields.io/badge/Security-Enterprise_Grade-brightgreen?style=for-the-badge)
 
----
-
-## 🚀 Key Architectural Features
-
-### 1. Zero-Prep Data Ingestion & Sanitization
-* **Automatic Header Normalization:** Converts chaotic raw columns (`  Unit Price  `, `Product line  `) into a clean standardized `snake_case` database schema on-the-fly.
-* **Structural Schema Alignment Layer:** Translates dirty source columns directly into program standards (`Price`, `Category`, `Total_Revenue`) using a crash-proof mapping engine.
-* **Dynamic Calculations Safety Net:** Recalculates total revenues automatically if the source file is missing calculations, preventing downstream execution crashes.
-
-### 2. Live Executive Performance KPIs
-* **Real-time Metrics:** Displays dynamic cards for **Total Sales Revenue**, **Average Unit Price**, and **Total Transactions**.
-* **Failsafe Executions:** Handled memory management and explicit column type-coercion blocks to prevent `KeyError` or run-time script crashes during complex aggregation queries.
+</div>
 
 ---
 
-## 🛠️ Tech Stack & Concepts
-* **Frontend:** Streamlit Web Engine (Wide responsive layout, custom CSS cards)
-* **Data Engineering:** Pandas & NumPy (Advanced cleaning, median imputations, boundary clipping)
-* **Design Philosophy:** Separation of Concerns (Backend ETL logic decoupled from UI display)
+### 🌟 Executive Summary & Value Proposition
 
-## 🌐 Live Demo
-👉 **[Launch the Live BI Dashboard](https://bi-dashboard-app-u5xwiuq4i42suscngjnsh7.streamlit.app/)**
+**Enterprise Cloud BI Platform** ek next-generation cloud-native analytics solution hai jo legacy reporting ko realtime, AI-powered predictive insights me convert karti hai. Is solution ko high-concurrency enterprise data environments ke liye scale-ready architecture par design kiya gaya hai.
 
-> 💡 **Note:** If the application is sleeping, please click **"Wake up"** to spin up the Streamlit container instantly.   
+#### ⚙️ Key Enterprise Capabilities
+* **🤖 Autonomous AI Insight Engine:** Integrated with Google Gemini 2.5 Flash for natural language executive summaries and dynamic anomaly detection.
+* **⚡ Serverless Microservices Backing:** Built on AWS Lambda & SAM CLI for 99.99% availability and pay-per-execution cost efficiency.
+* **🔄 Zero-Touch CI/CD Delivery:** Automated multi-environment testing and deployment via GitHub Actions workflow.
+* **🔒 Enterprise Security & Audit Compliance:** Encrypted credentials handling using AWS Secrets Manager & GitHub Secrets compliance protocols.
+
+---
+
