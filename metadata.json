@@ -1,0 +1,6 @@
+{
+  "name": "Swift-Mart BI Dashboard",
+  "description": "Zero-Prep Business Intelligence Dashboard & Automated ETL Column Mapping Pipeline",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

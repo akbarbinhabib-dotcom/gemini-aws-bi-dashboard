@@ -1,0 +1,70 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  Swift-Mart Enterprise BI - Secure Serverless Proxy for Gemini API.
+  Implements the Decoupled Security Pattern for Zero-Trust client environments.
+
+Globals:
+  Function:
+    Timeout: 45
+    MemorySize: 256
+    Runtime: nodejs20.x
+    Architectures:
+      - x86_64
+    Environment:
+      Variables:
+        GEMINI_API_KEY: !Ref GeminiApiKey
+        GATEWAY_API_KEY: !Ref GatewayApiKey
+
+Parameters:
+  GeminiApiKey:
+    Type: String
+    NoEcho: true
+    Description: "Secure API Key for the Google Gemini API (usually retrieved from AWS Secrets Manager)."
+  GatewayApiKey:
+    Type: String
+    NoEcho: true
+    Description: "Custom authorization secret passed in the 'X-Gateway-Key' header by the client app."
+
+Resources:
+  # Secure AWS API Gateway
+  GeminiProxyApi:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: prod
+      Cors:
+        AllowMethods: "'POST,OPTIONS'"
+        AllowHeaders: "'Content-Type,X-Gateway-Key,Authorization'"
+        AllowOrigin: "'*'"
+      GatewayResponses:
+        DEFAULT_4XX:
+          ResponseParameters:
+            Headers:
+              Access-Control-Allow-Origin: "'*'"
+              Access-Control-Allow-Headers: "'Content-Type,X-Gateway-Key,Authorization'"
+              Access-Control-Allow-Methods: "'POST,OPTIONS'"
+
+  # AWS Lambda Handler acting as the secure proxy
+  GeminiProxyFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ./
+      Handler: handler.handler
+      Events:
+        AlignSchema:
+          Type: Api
+          Properties:
+            Path: /api/v1/bi/align-schema
+            Method: post
+            RestApiId: !Ref GeminiProxyApi
+        Analyze:
+          Type: Api
+          Properties:
+            Path: /api/v1/bi/analyze
+            Method: post
+            RestApiId: !Ref GeminiProxyApi
+
+Outputs:
+  ProxyApiUrl:
+    Description: "Secure Gateway HTTPS Endpoint URL"
+    Value: !Sub "https://${GeminiProxyApi}.execute-api.${AWS::Region}.amazonaws.com/prod"
