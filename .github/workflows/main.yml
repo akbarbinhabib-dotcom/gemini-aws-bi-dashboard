@@ -41,5 +41,5 @@ jobs:
             --capabilities CAPABILITY_IAM \
             --no-confirm-changeset \
             --no-fail-on-empty-changeset \
-            --parameter-overrides GeminiApiKey="${{ secrets.GEMINI_API_KEY }}"
+            --parameter-overrides GeminiApiKey="${{ secrets.GEMINI_API_KEY }}" GatewayApiKey="${{ secrets.GATEWAY_API_KEY }}" 
         working-directory: ./aws-serverless
