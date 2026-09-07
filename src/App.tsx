@@ -145,7 +145,7 @@ export default function App() {
     formData.append("file", file);
 
     try {
-      const response = await fetch("/api/v1/bi/parse-file", {
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/v1/bi/parse-file`, {
         method: "POST",
         body: formData
       });
@@ -178,7 +178,7 @@ export default function App() {
     setIsAligning(true);
     setErrorMessage(null);
     try {
-      const response = await fetch("/api/v1/bi/align-schema", {
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/v1/bi/align-schema`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ headers, dataSample: sample })
@@ -212,7 +212,7 @@ export default function App() {
     setIsCleaning(true);
     setErrorMessage(null);
     try {
-      const response = await fetch("/api/v1/bi/clean-records", {
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/v1/bi/clean-records`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -250,7 +250,7 @@ export default function App() {
     setIsAnalyzing(true);
     setErrorMessage(null);
     try {
-      const response = await fetch("/api/v1/bi/analyze", {
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/v1/bi/analyze`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
